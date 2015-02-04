@@ -9,7 +9,9 @@ if (file.exists(figureName)){
 
 print(paste("Creating file:", figureName, "..."))
 
-png(filename = figureName, width = 480, height = 480)
+par(bg = NA)
+
+png(filename = figureName, width = 480, height = 480, bg=NA)
 
 with(dataPower, hist(Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power"))
 

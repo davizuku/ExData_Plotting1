@@ -9,9 +9,9 @@ if (file.exists(figureName)){
 
 print(paste("Creating file:", figureName, "..."))
 
-png(filename = figureName, width = 480, height = 480)
+png(filename = figureName, width = 480, height = 480, bg=NA)
 
-par(mfrow=c(2, 2), mar=c(6, 4, 3, 2))
+par(mfrow=c(2, 2), mar=c(6, 4, 3, 2), bg = NA)
 
 with(dataPower, {
 	# First plot

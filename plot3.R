@@ -9,7 +9,9 @@ if (file.exists(figureName)){
 
 print(paste("Creating file:", figureName, "..."))
 
-png(filename = figureName, width = 480, height = 480)
+par(bg = NA)
+
+png(filename = figureName, width = 480, height = 480, bg=NA)
 
 with(dataPower, {
 	plot(date.time, Sub_metering_1, type="n", xlab="", ylab="Energy sub metering")
