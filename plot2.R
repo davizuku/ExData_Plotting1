@@ -1,5 +1,9 @@
 source("read_data.R")
 
+#store langugage settings
+user_lang <- Sys.getlocale("LC_TIME")
+Sys.setlocale("LC_TIME", "English")
+
 figureName <- "plot2.png"
 
 if (file.exists(figureName)){
@@ -18,3 +22,6 @@ with(dataPower, plot(date.time, Global_active_power, type="l", xlab="", ylab="Gl
 dev.off()
 
 print("Finished!")
+
+#restore language
+Sys.setlocale("LC_TIME", user_lang)

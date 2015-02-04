@@ -1,5 +1,9 @@
 source("read_data.R")
 
+#store langugage settings
+user_lang <- Sys.getlocale("LC_TIME")
+Sys.setlocale("LC_TIME", "English")
+
 figureName <- "plot4.png"
 
 if (file.exists(figureName)){
@@ -36,4 +40,5 @@ dev.off()
 
 print("Finished!")
 
-
+#restore language
+Sys.setlocale("LC_TIME", user_lang)
